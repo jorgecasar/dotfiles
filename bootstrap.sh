@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+echo "Setting up your Mac..."
+
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin main;
+# git pull origin main;
 
 function doIt() {
 	rsync --exclude ".git/" \
@@ -10,7 +12,10 @@ function doIt() {
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
+		--exclude "LICENSE.txt" \
+		--exclude "LICENSES" \
+		--exclude "custom" \
+		--exclude "homebrew" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
@@ -25,3 +30,10 @@ else
 	fi;
 fi;
 unset doIt;
+
+# Homebrew
+source ./homebrew/install.sh
+brew cleanup
+
+# Set macOS preferences - we will run this last because this will reload the shell
+source ./.macos

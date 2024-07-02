@@ -1,10 +1,23 @@
-# Mathias’s dotfiles
+# JorgeCasar's dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
 
 ## Installation
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+## Setting up your Mac
+
+After backing up your old Mac you may now follow these install instructions to setup a new one.
+
+1. Update macOS to the latest version through system preferences
+1. Setup an SSH key by using one of the two following methods
+    - If you use 1Password, install it with the 1Password SSH agent and sync your SSH keys locally.
+    - Otherwise generate a new public and private SSH key by running:
+    ```
+    curl https://raw.githubusercontent.com/jorgecasar/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
+    ```
+1. Clone this repo or use Git-free install
 
 ### Using Git and the bootstrap script
 

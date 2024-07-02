@@ -1,0 +1,38 @@
+# Install GNU core utilities (those that come with macOS are outdated).
+brew 'coreutils' # GNU File, Shell, and Text utilities
+
+# Install a modern version of Bash.
+brew 'bash' # Bourne-Again SHell, a UNIX command interpreter
+brew 'bash-completion@2' # Programmable completion for Bash 4.2+
+
+# Development
+brew 'nvm' # Manage multiple Node.js versions
+brew 'git' # Distributed revision control system
+
+# Apps
+
+## Browsers
+
+### Chrome https://chromestatus.com/roadmap
+cask 'google-chrome'
+cask 'google-chrome@beta'
+cask 'google-chrome@dev'
+cask 'google-chrome@canary'
+
+### Others
+cask 'firefox'
+cask 'microsoft-edge'
+
+## Development
+cask 'docker'
+cask 'visual-studio-code'
+
+## Communication
+cask 'slack' # Team communication and collaboration software
+cask 'discord' # Voice and text chat software
+
+## Productivity
+cask 'Rectangle' # Move and resize windows using keyboard shortcuts or snap areas
+
+# Install Mac App Store CLI
+brew 'mas' # Mac App Store command-line interface
